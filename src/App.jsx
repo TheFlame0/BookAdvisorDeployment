@@ -8,6 +8,7 @@ import profile from './pages/profile.jsx';
 import log_in from './pages/LogIn.jsx';
 
 
+
 const App = () => {
   console.log(window.location.pathname)
   let Page
