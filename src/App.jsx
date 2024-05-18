@@ -1,53 +1,29 @@
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './HomePage-Components/Footer';
 import Navbar from './HomePage-Components/Navbar';
 import Home from './pages/Home.jsx';
 import SearchP from './pages/SearchP.jsx';
 import SignUp from './pages/SignUp.jsx';
-import profile from './pages/profile.jsx';
-import log_in from './pages/LogIn.jsx';
-
-
+import Profile from './pages/profile.jsx';
+import LogIn from './pages/LogIn.jsx';
 
 const App = () => {
-  console.log(window.location.pathname)
-  let Page
-  switch(window.location.pathname){
-    case "/":
-      Page = Home
-      break
-    case "/Search":
-    Page = SearchP
-      break
-    case "/SignUp":
-    Page = SignUp
-      break
-    case "/Profile":
-      Page = profile
-      break
-    case "/add_book":
-      Page = add_book
-      break
-    case "/LogIn":
-      Page = log_in
-      break
-  }
-  if(Page === SignUp || Page === log_in){
-    return(<Page />)
-  }
-  else{
   return (
-
-    <div className='App'>
-      <Navbar />
-      <Page />
-      <Footer />
-    </div>
+    <Router>
+      <div className='App'>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<SearchP />} />
+          <Route path="/search" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<LogIn />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
-}
-
-}
+};
 
 export default App;
-
-
