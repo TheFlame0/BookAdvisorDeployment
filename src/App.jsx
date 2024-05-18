@@ -10,7 +10,7 @@ import LogIn from './pages/LogIn.jsx';
 
 const App = () => {
   return (
-    <Router path="/">
+    <Router >
       <div className='App'>
         <Navbar />
         <Routes path="/">
