@@ -14,10 +14,10 @@ const App = () => {
   let Page
   switch(window.location.pathname){
     case "/":
-      Page = Home
+      Page = SearchP
       break
       case "/Search":
-      Page = SearchP
+      Page = Home
       break
       case "/SignUp":
       Page = SignUp
