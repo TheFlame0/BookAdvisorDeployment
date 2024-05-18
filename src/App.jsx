@@ -14,23 +14,23 @@ const App = () => {
   let Page
   switch(window.location.pathname){
     case "/":
-      Page = SearchP
-      break
-      case "/Search":
       Page = Home
       break
-      case "/SignUp":
-      Page = SignUp
+    case "/Search":
+    Page = SearchP
       break
-      case "/Profile":
-        Page = profile
-        break
-      case "/add_book":
-        Page = add_book
-        break
-      case "/LogIn":
-        Page = log_in
-        break
+    case "/SignUp":
+    Page = SignUp
+      break
+    case "/Profile":
+      Page = profile
+      break
+    case "/add_book":
+      Page = add_book
+      break
+    case "/LogIn":
+      Page = log_in
+      break
   }
   if(Page === SignUp || Page === log_in){
     return(<Page />)
