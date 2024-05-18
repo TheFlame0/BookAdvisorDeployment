@@ -14,6 +14,10 @@ const App = () => {
       <div className='App'>
         <Navbar />
         < Home/>
+        < SearchP/>
+        <SignUp />
+        <Profile />
+        <LogIn />
         <Routes path="/">
           <Route path="/Home" element={< Home/>} />
           <Route path="/search" element={< SearchP/>} />
